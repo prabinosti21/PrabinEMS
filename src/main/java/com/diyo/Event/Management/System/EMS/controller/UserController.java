@@ -50,8 +50,7 @@ public class UserController {
     private ResponseEntity<String>findByEmailAndSecurityAnswer
             (@Valid @PathVariable("email") String email, @Valid @PathVariable("securityAnswer") String securityAnswer)
     {
-        //added security question for securing the password reset function.
-        return  ResponseEntity.ok((userService.findByEmailAndSecurityAnswer(email,securityAnswer)));
+        return  ResponseEntity.ok((userService.findUser(email)));
     }
 
     @PostMapping("/reset")

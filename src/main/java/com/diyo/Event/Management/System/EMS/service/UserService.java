@@ -66,8 +66,8 @@ public class UserService {
         }
     }
 
-    public String findByEmailAndSecurityAnswer(String email, String securityAnswer) {
-        Optional<User>userOptional = userRepository.findByEmailAndSecurityAnswer(email,securityAnswer);
+    public String findUser(String email) {
+        Optional<User>userOptional = userRepository.findByEmail(email);
         if(userOptional.isPresent()){
             return "User found successfully.";
         }
@@ -76,7 +76,7 @@ public class UserService {
         }
     }
     public String updatePassword(User user) {
-        Optional<User>userOptional = userRepository.findByEmailAndSecurityAnswer(user.getEmail(), user.getSecurityAnswer());
+        Optional<User>userOptional = userRepository.findByEmail(user.getEmail());
         if(userOptional.isPresent()){
             User userDb = userOptional.get();
             user.setUserId(userDb.getUserId());
