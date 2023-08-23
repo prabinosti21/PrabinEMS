@@ -50,7 +50,7 @@ public class UserController {
     private ResponseEntity<String>findByEmailAndSecurityAnswer
             (@Valid @PathVariable("email") String email, @Valid @PathVariable("securityAnswer") String securityAnswer)
     {
-        return  ResponseEntity.ok((userService.findUser(email)));
+        return  ResponseEntity.ok((userService.findByEmailAndSecurityAnswer(email, securityAnswer)));
     }
 
     @PostMapping("/reset")

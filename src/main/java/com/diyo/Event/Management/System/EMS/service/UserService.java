@@ -66,8 +66,8 @@ public class UserService {
         }
     }
 
-    public String findUser(String email) {
-        Optional<User>userOptional = userRepository.findByEmail(email);
+    public String findByEmailAndSecurityAnswer(String email, String securityAnswer) {
+        Optional<User>userOptional = userRepository.findByEmailAndSecurityAnswer(email,securityAnswer);
         if(userOptional.isPresent()){
             return "User found successfully.";
         }
