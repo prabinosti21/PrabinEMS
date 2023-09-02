@@ -2,9 +2,9 @@ package com.diyo.Event.Management.System.EMS.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import static jakarta.persistence.CascadeType.ALL;
 
 @Entity
 @Data

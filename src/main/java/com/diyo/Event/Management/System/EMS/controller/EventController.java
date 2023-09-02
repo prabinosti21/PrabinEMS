@@ -59,4 +59,6 @@ public class EventController {
         return ResponseEntity.ok(eventService.updateEventDetails(id, event));
     }
 
+
+
 }
