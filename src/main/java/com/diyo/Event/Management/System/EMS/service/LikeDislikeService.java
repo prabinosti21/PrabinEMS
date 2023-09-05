@@ -29,7 +29,7 @@ public class LikeDislikeService {
             return "Liked";
         }
         else{
-            return null;
+            return "Ohh No";
         }
     }
 
@@ -42,7 +42,7 @@ public class LikeDislikeService {
             return "Disliked";
         }
         else{
-            return null;
+            return "Oh no";
         }
     }
 
